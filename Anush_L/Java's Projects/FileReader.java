@@ -22,10 +22,11 @@ public class FileReader {
 			filewriter(filename, a);
 			System.out.println(a);
 		} else {
+            //Review: Using regexp in message below is not user friendly wat, please avoid using it and just describe the issue in a couple words, e.g. only files with .txt extension are acceptable.  
 			System.out.println("Wrong FileName Format. FileName should include [A-Za-z0-9]{2,10}\\.[a-z]{3,4}.");
 		}
 	}
-	
+	//Review: Use camel case format for methods name, e,g, formatValidation
 	public static boolean formatvalidation(String filename) {
 		String regex = "[A-Za-z0-9]{2,10}\\.[a-z]{3,4}";
 		Pattern pattern = Pattern.compile(regex);
@@ -41,6 +42,7 @@ public class FileReader {
         	try{
             	read.createNewFile();
             } catch(IOException e) {
+            //Review: Use more informative error messages 
             	throw new RuntimeException("Something went wrong");
             }
        }
