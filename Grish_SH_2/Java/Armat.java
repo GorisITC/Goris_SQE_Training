@@ -6,7 +6,7 @@ public class Armat {
 		System.out.println(i);
 		break;
 	    }
-	    else if (i * i > a){
+	    else (i * i > a){
 	    System.out.println("Trvac tiv@ armat chuni");
 	    break;
 	    }
