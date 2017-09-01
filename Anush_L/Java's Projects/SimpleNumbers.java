@@ -1,14 +1,14 @@
 public class SimpleNumbers {
 	public static void main(String[] args) {
 		for (int i = 1; i <= 500; i++) {
-			int d = 0;
+			boolean d = false;
 			for (int j = 2; j < i; j++) {
 				if (i % j == 0) {
-					d++;
+					d = true;
 					break;
 				}
 			}
-			if (d < 1) {
+			if (d == false) {
 				System.out.println(i);
 			}
 		}
