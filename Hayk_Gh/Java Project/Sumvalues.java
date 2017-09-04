@@ -1,3 +1,5 @@
+// looks good
+
 public class Sumvalues {
     public static void main (String[] args) {
 

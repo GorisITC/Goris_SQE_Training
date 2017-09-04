@@ -1,4 +1,4 @@
-
+//looks good
 public class ElementsSum {
 	public static void main(String[] args) {
 		int n = 15;
