@@ -16,7 +16,7 @@ public class Area {
            		s = 0;
             		return s;
         	}
-        	System.out.print("The area of triangle is ");
+        	System.out.print("The area of circle is ");
         	return s;
 	}
 //	Method for Triangle
