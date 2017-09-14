@@ -27,6 +27,10 @@ public class Calculator {
 	}
 	public static float division(float a, float b) {
 		float div = a / b;
+		if (b == 0) {
+            		System.out.print("Number can not be divided to ");
+            		return b;
+        	}
 		System.out.print(a + " / " + b + " = ");
 		return div;
 	}
