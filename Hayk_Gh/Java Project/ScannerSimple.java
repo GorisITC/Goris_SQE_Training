@@ -17,7 +17,7 @@ public class ScannerSimple {
           if(a.isDirectory()){
               File[] b = a.listFiles();
               for (int i = 0; i<b.length; i++){
-                  f.write(b[i].getName() + " " + b[i] + " ");
+                  f.write(b[i].getName() + " " + b[i]);
                   f.newLine();
               }
               f.flush();
