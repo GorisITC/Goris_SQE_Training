@@ -6,7 +6,7 @@ public class Main {
         while (i*i!=a) {
             i++;
             if (i * i > a) {
-                System.out.println("Tivn armat chuni");
+                System.out.println("Նշված թիվն արմատ չունի");
                 System.exit(0);
             }
         }
