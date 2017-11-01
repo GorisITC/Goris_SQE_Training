@@ -9,7 +9,7 @@ public class Main {
         try{
                 Stack st1 = new Stack(2);
                 System.out.println("Մուտքագրեք, խնդրեմ, զանգվածի հերթական անդամին․");
-            for (int i = 0; i < 2; i++) {
+            for (int i = 0; i < 0; i++) {
                 st1.push(input.next());
             }
                 //st1.tpelGeneralInfo();
