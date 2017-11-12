@@ -13,7 +13,7 @@ public class Main {
         sim1.zangel(2);
         sim1.stugelhashivy();
         sim2.stugelhashivy();
-        sim2.licqavorel(1000);
+        sim2.licqavorel(10000);
 
 
 
