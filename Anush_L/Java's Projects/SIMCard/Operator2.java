@@ -1,5 +1,5 @@
 
-public class Operator2 implements SIMCard {
+public class Operator2 extends SIMCard {
 	
 	static int tariffSO = 4;
 	static int tariffDO = 40;
@@ -8,6 +8,7 @@ public class Operator2 implements SIMCard {
 	int balance = 0;
 	boolean call = false;
 	boolean operator = false;
+	int bonus = 0;
 	
 	public Operator2(int number) {
 		this.number = Integer.valueOf(String.valueOf(code) + String.valueOf(number));
@@ -33,7 +34,7 @@ public class Operator2 implements SIMCard {
 		if (balance > 0) {
 			this.balance += balance;
 		} else {
-			System.out.println("Խնդրում ենք մուտքագրել դրական գումար։");
+			validNumber();
 		}
 	}
 	
@@ -44,25 +45,39 @@ public class Operator2 implements SIMCard {
 		}
 	}
 
+	@Override
 	public void talk(int minute) {
 		if (minute > 0) {
 			if (call == true) {
 				if (balance - (minute * tariffSO) >= 0 && operator == true) {
 					balance -= minute * tariffSO;
+					bonus += minute / 10;
 				} else if (balance - (minute * tariffDO) >= 0) {
 					balance -= minute * tariffDO;
+					bonus += minute / 20;
 				} else {
-					System.out.println("Ձեր հաշիվը բավարար չէ զանգ կատարելու համար։");
+					noBalance();
 				}
 				call = false;
 				operator = false;
 			} else {
-				System.out.println("Խոսելուց առաջ խնդրում ենք զանգ կատարել։");
+				noCall();
 			}
 		} else {
-			System.out.println("Խնդրում ենք մուտքագրել դրական թիվ։");
+			validNumber();
 		}
 	}
-
+	
+	public int getBonus() {
+		return bonus;
+	}
+	
+	public void useBonus() {
+		if (bonus > 0) {
+			balance += bonus;
+		} else {
+			System.out.println("Ցավոք, Դուք բոնուս չունեք։");
+		}
+	}
 
 }
