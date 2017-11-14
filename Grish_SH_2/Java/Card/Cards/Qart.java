@@ -1,5 +1,6 @@
 package Cards;
 
+// TODO - why not Card like the rest? :)
 public abstract class Qart {
   protected double myMoney = 0;
 
@@ -10,6 +11,7 @@ public abstract class Qart {
         if (money > 0) {
             myMoney += money;
         }
+        // TODO - will the message make sence if user tries to add negative amount of money?
         System.out.println("You added " + money + " on your balance");
     }
     public abstract double takemoney(double money);

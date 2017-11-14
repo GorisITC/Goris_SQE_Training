@@ -3,6 +3,7 @@ import Cards.VisaCard;
 
 public class Main {
     public static void main(String[] args) {
+        // TODO - think about keeping a list of cards, doing the same operations on all of them and comparing the results
        MasterCard masterCard = new MasterCard();
        masterCard.addMoney(2000);
        masterCard.balance();
