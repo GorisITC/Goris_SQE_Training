@@ -5,7 +5,8 @@ import SimCards.Sim2;
 public class Main {
 
     public static void  main(String[] args) {
-
+    
+        // TODO - pls keep the code formatting (indents, line breaks)
       Sim1 sim1 = new Sim1();
         Sim2 sim2 = new Sim2();
       sim1.stugelhashivy();

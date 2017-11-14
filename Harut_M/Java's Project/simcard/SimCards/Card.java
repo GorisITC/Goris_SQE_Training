@@ -1,5 +1,6 @@
 package SimCards;
 
+// TODO - is this class really abstract?
 public abstract class Card {
 
     protected int balans=0;

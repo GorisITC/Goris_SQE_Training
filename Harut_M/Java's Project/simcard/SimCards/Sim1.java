@@ -1,6 +1,7 @@
 package SimCards;
 
 public class Sim1 extends Card {
+    // TODO - think about charges for calls between different networks
     int arjeq = 10;
 
     @Override
