@@ -1,21 +1,20 @@
-public class Visa implements BankCards{
-    double currentCount=0.0;
-    double money=0.0;
-
-        @Override
-        public void AddMoney(double money) {
-            currentCount=currentCount+money;
-            System.out.println("Successfully added: "+money+" dram");
-        }
+public class Visa extends BankCard implements BankomatIsEmpty{
 
         @Override
         public void GetMoney(double money) {
-            currentCount=currentCount-money;
-            System.out.println(money+"dram is get from your account.");
+            if(money>currentCount){
+                System.out.println("There is not enough money in your account");
+            }
+            else if(currentCount!=0) {
+                currentCount = currentCount - money;
+                System.out.println(money + " dram is get from your account.");
+            }
+            else {
+                System.out.println("There is no maney in your account");
+            }
         }
-
         @Override
-        public void CurrentCount() {
-            System.out.println("Your currennt count is: "+currentCount);
+        public void BankomatIsEmpty(){
+
         }
-    }
+}

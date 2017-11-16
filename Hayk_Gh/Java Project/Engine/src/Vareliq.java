@@ -1,5 +1,7 @@
+// TODO - interesting concept , but is it logical to extend the Engine to make Petrol? :)
 public class Vareliq extends Engine {
     int qanak;
+    // TODO - does it mean that it is possible to create a non-existing/invalid petrol?
     boolean k = true;
 
     Vareliq(int qanak) {
