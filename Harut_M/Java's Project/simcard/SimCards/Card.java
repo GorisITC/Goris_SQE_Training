@@ -1,31 +1,34 @@
 package SimCards;
 
-// TODO - is this class really abstract?
 public abstract class Card {
 
-    protected int balans=0;
+    protected int balans = 0;
     int arjeq;
+    int arjeqSomeOperator;
+    int arjeqDiffOperator;
+    boolean a;
 
-    public void stugelhashivy(){
+    public void stugelhashivy() {
 
-        System.out.println("Dzer hashivy kazmum e" + " " +balans);
+
+        System.out.println("Dzer hashivy kazmum e" + " " + balans + " " + "dram");
     }
 
-    public void licqavorel(int pox){
-       if (pox >0){
-        balans+=pox;
+    double koder[] = {0.99, 0.91, 0.43, 0.77, 0.94, 0.98, 0.96};
 
-           System.out.println("Dzer hashivyc kazmum e"+ " " + balans);
-       }
-        else {
-           System.out.println("Dzer gorcarqy merjvac e");
-       }
+    public void licqavorel(int pox) {
+        if (pox > 0) {
+            balans += pox;
 
-    }
-
-
-    public void zangel(int jamanak){
+            System.out.println("Dzer hashivy licqavorvec " + " " + pox + " " +"dramov");
+        } else {
+            System.out.println("Dzer gorcarqy merjvac e");
+        }
 
     }
+
+
+    public abstract void zangel(double operatorCode, int hamar, int jamanak);
+
 
 }
