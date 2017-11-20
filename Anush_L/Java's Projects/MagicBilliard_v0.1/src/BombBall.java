@@ -1,8 +1,8 @@
 
 public class BombBall extends Ball {
 
-	public BombBall(double x, double y, double radius, int number, Board board) {
-		super(x, y, radius, number, board);
+	public BombBall(double x, double y, double vx, double vy, double radius, String name) {
+		super(x, y, vx, vy, radius, name);
 	}
 	
 	public void checkTouchBall(Ball ball) {
@@ -11,6 +11,7 @@ public class BombBall extends Ball {
 		} else {
 			touchAction(ball);
 		}
+		checkTouchBoard();
 	}
 	
 	public void touchAction(Ball ball) {

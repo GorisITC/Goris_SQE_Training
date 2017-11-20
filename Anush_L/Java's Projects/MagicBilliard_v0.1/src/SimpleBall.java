@@ -1,18 +1,19 @@
 
 public class SimpleBall extends Ball{
 
-	public SimpleBall(double x, double y, double radius, int number, Board board) {
-		super(x, y, radius, number, board);
+	public SimpleBall(double x, double y, double vx, double vy, double radius, String name) {
+		super(x, y, vx, vy, radius, name);
 	}
 	
 	public void checkTouchBall(Ball ball) {
 		if (ball.getClass().getSimpleName().equals("Ghostball")) {
 			
-		} else if (ball.getClass().getSimpleName().equals("BomBall")) {
+		} else if (ball.getClass().getSimpleName().equals("BombBall")) {
 			ball.touchAction(SimpleBall.this);
 		} else {
-			touchAction(ball);
+			SimpleBall.this.touchAction(ball);
 		}
+		checkTouchBoard();
 	}
 	
 	public void touchAction(Ball ball) {

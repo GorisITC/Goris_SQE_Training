@@ -5,7 +5,7 @@ public interface Board {
 	
 	public String getColor(String color);
 	
-	public void addBall(Ball ball, int number);
+	public void addBall(Ball ball);
 	
 	public void removeBall(Ball ball);
 	
