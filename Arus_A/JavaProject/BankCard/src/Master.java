@@ -1,4 +1,4 @@
-public class Master extends BankCard implements BankomatIsEmpty{
+public class Master extends BankCard{
 
     @Override
     public void GetMoney(double money) {
@@ -13,9 +13,4 @@ public class Master extends BankCard implements BankomatIsEmpty{
             System.out.println("There is no money in your account");
         }
     }
-
-    public void BankomatIsEmpty(){
-
-    }
-
 }

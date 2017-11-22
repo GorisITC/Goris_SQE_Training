@@ -1,4 +1,4 @@
-public class Visa extends BankCard implements BankomatIsEmpty{
+public class Visa extends BankCard{
 
         @Override
         public void GetMoney(double money) {
@@ -12,9 +12,5 @@ public class Visa extends BankCard implements BankomatIsEmpty{
             else {
                 System.out.println("There is no maney in your account");
             }
-        }
-        @Override
-        public void BankomatIsEmpty(){
-
         }
 }
