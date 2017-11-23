@@ -1,10 +1,10 @@
-import java.awt.*;
-import java.util.ArrayList;
+import java.io.IOException;
 
 public class MainGame {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         Read.Kardal();
-        GamePlay.run(1000,"xcx");
+        GamePlay.run(1000);
+        GameOverWrite.Grel();
 
 /** read args from Run-> Edit Configurations
  ** args - width: 1000 height: 1000 time: 50

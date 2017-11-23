@@ -4,7 +4,7 @@ import java.util.List;
 public class GamePlay {
     static final List<Ball> balls=new ArrayList<>();
 
-    static void run(double time, String output){
+    static void run(double time){
         while (time>0){
             for(Ball ball : balls){
                 ball.move(0.1);
