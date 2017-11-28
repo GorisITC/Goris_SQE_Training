@@ -1,17 +1,24 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Table {
-    private int width;
-    private int length;
-    static final List<Ball> balls=new ArrayList<>();
+ //   ArrayList<Ball> balls;
+    int width;
+    int height;
+    String color;
 
-    public Table(int width, int length){
+
+    /**
+     * creating a table
+    **/
+    public Table(int width, int height){
         this.width=width;
-        this.length=length;
+        this.height=height;
+        color="Green";
     }
-
-    public void addBall(Ball ball){
-        balls.add(ball);
-    }
+    /**
+     * put the balls on the table
+     */
+/*    public void putBallsOnTable(){
+        balls = Read.getBalls();
+    }*/
 }

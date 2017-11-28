@@ -8,12 +8,12 @@ public class Ball {
     public double radius;
     public String type;
 
-    public Ball(int x, int y, int vx, int vy, double radius, String type){
+    public Ball(int x, int y, int vx, int vy, String type){
         this.x=x;
         this.y=y;
         this.vx=vx;
         this.vy=vy;
-        this.radius=radius;
+        this.radius=1.44;
         this.type=type;
     }
     public void move(double time){

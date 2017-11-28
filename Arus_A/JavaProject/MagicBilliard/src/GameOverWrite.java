@@ -1,20 +1,21 @@
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 public class GameOverWrite {
 
-    public static void Grel() throws IOException{
-        final ArrayList<Ball> balls = new ArrayList<>();
-        File file = new File("/home/arus/Java/Goris_SQE_Training/Arus_A/JavaProject/MagicBilliard/GameResults.csv");
+    public static void grel(String output) throws IOException{
+        List<Ball> balls;
+        File file = new File(output);
         file.createNewFile();
+
         FileWriter wr=new FileWriter(file);
 
-        for (int i = 0; i <Read.ballCount ; i++) {
-            String ballString="Petq e tpvi resulty\n";
-            wr.write(ballString);
+        for (int i = 0; i <Read.ballCount; i++){
+            balls = Read.getBalls();
+            String info=balls.get(i).x+", "+balls.get(i).y+", "+balls.get(i).vx+", "+balls.get(i).vy+", "+balls.get(i).type+"\n";
+            wr.write(info);
             wr.flush();
         }
         wr.close();
