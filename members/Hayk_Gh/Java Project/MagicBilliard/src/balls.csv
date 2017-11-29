@@ -1,0 +1,9 @@
+Simple,200,100,0,0,simpleball
+Ghost,500,300,10,20,ghostball
+Bomb,100,600,30,40,bombball
+Ghost,600,700,20,30,ghostball
+Ghost,700,700,20,30,ghostball
+Simple,600,700,20,30,simpleball
+Bomb,600,700,20,30,bombball
+Simple,600,700,20,30,simpleball
+Simple,10000,99900,300000,3000000,simpleball
