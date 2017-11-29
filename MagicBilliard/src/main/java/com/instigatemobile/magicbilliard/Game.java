@@ -66,7 +66,7 @@ public class Game {
             table.addBall(ball);
         }
         
-        table.run(time, output); 
+        table.run(time, output);
         
         
         
