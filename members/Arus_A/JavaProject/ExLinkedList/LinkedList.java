@@ -15,16 +15,15 @@ public class LinkedList<T> {
     }
 
     public T getIndex(int i) {
-        Node<T> secondValue = first;
+        Node<T> firstValue = first;
         try {
             for (int j = 0; j < i; j++) {
-                secondValue = secondValue.next;
+                firstValue = firstValue.next;
             }
-        }
-        catch (IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             System.out.println("The inserted index is greater than a length of LinkedList.");
         }
-        return secondValue.value;
+        return firstValue.value;
     }
 
     public int indexOf(T value) {
@@ -46,41 +45,65 @@ public class LinkedList<T> {
 
     public void removeByIndex(int index) {
         Node<T> firstValue = first;
-        try{
+        try {
             if (index > length) {
                 System.out.println("Please insert the correct index for removing the object!");
             }
-        }
-        catch (IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             System.out.println("The inserted index is greater than a length of LinkedList.");
         }
-        if(index==0){
-            first=first.next;
-            first.prev=null;
+        if (index == 0) {
+            first = first.next;
+            first.prev = null;
             length--;
-        }
-        else if(index==length-1){
-            last=last.prev;
-            last.next=null;
+        } else if (index == length - 1) {
+            last = last.prev;
+            last.next = null;
             length--;
-        }
-        else{
+        } else {
             for (int i = 0; i < index; i++) {
                 firstValue = firstValue.next;
             }
-            firstValue.prev.next=firstValue.next;
-            firstValue.next.prev=firstValue.prev;
+            firstValue.prev.next = firstValue.next;
+            firstValue.next.prev = firstValue.prev;
             length--;
         }
     }
-    public void printLinkedList(){
+
+    public void removeByValue(T value) {
+        Node<T> firstValue = first;
+        int index = 0;
+        for (int i = 0; i < getLength() - 1; i++) {
+            firstValue = firstValue.next;
+            if (firstValue.value.equals(value)) {
+                index = i;
+                break;
+            }
+        }
+        if (index == 0) {
+            first = first.next;
+            first.prev = null;
+            length--;
+        } else if (index == getLength() - 2) {
+            last = last.prev;
+            last.next = null;
+            length--;
+        } else {
+            firstValue.prev.next = firstValue.next;
+            firstValue.next.prev = firstValue.prev;
+            length--;
+        }
+    }
+
+    public void printLinkedList() {
         Node<T> firstValue = first;
         System.out.println(first.value);
-        for (int i = 0; i < length-1; i++) {
+        for (int i = 0; i < length - 1; i++) {
             firstValue = firstValue.next;
             System.out.println(firstValue.value);
         }
     }
+
     public T getFirst() {
         return first.value;
     }
