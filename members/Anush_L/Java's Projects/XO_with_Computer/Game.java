@@ -30,18 +30,18 @@ public class Game {
 		setBoard();
 
 		Scanner u2 = new Scanner(System.in);
-		System.out.println("If you want me to be first player, please type y: ");
+		System.out.println("First player will be 'X'. If you want me to be first player, please type y: ");
 		String first = u2.next();
 
 		if (first.equalsIgnoreCase("y")) {
 			System.out.println("OK. I'm the first player.");
-			user1.setName("Computer");
+			user1.setName(name2);
 			user2.setName(name1);
 			me = this.x;
 			player = this.o;
 		} else {
 			user1.setName(name1);
-			user2.setName("Computer");
+			user2.setName(name2);
 		}
 
 		while (game == true) {
